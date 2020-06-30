@@ -1,0 +1,13 @@
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.exe
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.deps.json
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.runtimeconfig.json
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.runtimeconfig.dev.json
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.dll
+C:\Users\maheu\Documents\Excel\bin\Debug\netcoreapp3.1\Excel.pdb
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.csprojAssemblyReference.cache
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.csproj.CoreCompileInputs.cache
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.AssemblyInfoInputs.cache
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.AssemblyInfo.cs
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.dll
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.pdb
+C:\Users\maheu\Documents\Excel\obj\Debug\netcoreapp3.1\Excel.genruntimeconfig.cache
