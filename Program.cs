@@ -13,6 +13,7 @@ namespace Excel
             p.Preco = 5600f;
 
             p.Inserir(p);
+            p.Remover("Microondas");
 
             List<Produto> Lista  = p.Ler();
 

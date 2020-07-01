@@ -1,6 +1,7 @@
 using System.IO;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Produto
     {
@@ -72,7 +73,48 @@ public class Produto
             produtos.Add(x);
             }
 
+            produtos = produtos.OrderBy(y=> y.Nome).ToList();
+            
             return produtos;
+        }
+
+        /// <summary>
+        /// Ira remover determinada linha 
+        /// </summary>
+        /// <param name="_termo"></param>
+        public void Remover(string _termo)
+        {
+            //Lista de backup
+
+            List<string> linhas = new List<string>();
+
+            // usado para ler csv
+            using(StreamReader arquivo = new StreamReader(PATH))
+            {
+                string linha;
+                while((linha= arquivo.ReadLine()) != null)
+                {
+                    linhas.Add(linha);
+                }
+            }
+
+            linhas.RemoveAll(l => l.Contains(_termo));
+
+            // forma de reescerever os dados
+
+            using(StreamWriter output = new StreamWriter(PATH))
+            {
+                foreach(string li in linhas)
+                {
+                    output.Write(li + "\n");
+                }
+            }
+        }
+
+
+        public List<Produto> Filtrar(string _nome)
+        {
+            return Ler().FindAll(x => x.Nome == _nome);
         }
        
         //CRIADO PARA OTIMIZAR O TEMPO 
