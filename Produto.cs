@@ -100,6 +100,10 @@ public class Produto
 
             linhas.RemoveAll(l => l.Contains(_termo));
 
+            
+            ReescreverCSV(linhas);
+
+
             // forma de reescerever os dados
 
             using(StreamWriter output = new StreamWriter(PATH))
@@ -109,7 +113,54 @@ public class Produto
                     output.Write(li + "\n");
                 }
             }
+
+            
+            
+
         }
+
+
+        public void Alterar(Produto produtoAlterado)
+        {
+                 List<string> linhas = new List<string>();
+
+            // usado para ler csv
+            using(StreamReader arquivo = new StreamReader(PATH))
+            {
+                string linha;
+                while((linha= arquivo.ReadLine()) != null)
+                {
+                    linhas.Add(linha);
+                }
+            }
+
+            linhas.RemoveAll(x => x.Split(";")[0].Contains(produtoAlterado.Codigo.ToString()));
+            Codigo.ToString();
+
+            linhas.Add(PrepararLinhaCSV(produtoAlterado));
+
+            ReescreverCSV(linhas);
+            using(StreamWriter output = new StreamWriter(PATH))
+            {
+                foreach(string li in linhas)
+                {
+                    output.Write(li + "\n");
+                }
+            }
+        }
+
+         private void ReescreverCSV(List<string> lines){
+            
+            using(StreamWriter output = new StreamWriter(PATH))
+            {
+                foreach(string ln in lines)
+                {
+                    output.Write(ln + "\n");
+                }
+            }   
+        }
+
+
 
 
         public List<Produto> Filtrar(string _nome)

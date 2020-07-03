@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace Excel
 {
     class Program
@@ -13,11 +14,23 @@ namespace Excel
             p.Preco = 5600f;
 
             p.Inserir(p);
-            p.Remover("Microondas");
 
-            List<Produto> Lista  = p.Ler();
+            Produto Alterado = new Produto();
+            Alterado.Codigo = 3;
+            Alterado.Nome = "Ventilador";
+            Alterado.Preco = 500f;
+            
+            
+            p.Alterar(Alterado);
 
-            foreach(Produto item in Lista )
+            
+
+            List<Produto> lista = new List<Produto>();
+            lista = p.Ler();
+
+         
+
+            foreach(Produto item in lista )
             {
                
                 System.Console.WriteLine($"R$ {item.Preco} . {item.Nome}");
